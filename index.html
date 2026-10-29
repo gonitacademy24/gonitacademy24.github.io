@@ -1,1 +1,375 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>গণিত একাডেমি | মেজবা স্যার</title>
+<meta name="description" content="মেজবা স্যার পরিচালিত গণিত একাডেমি। গণিত, উচ্চতর গণিত ও বিজ্ঞান শিক্ষার জন্য যোগাযোগ করুন।">
 
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --blue: #173d91;
+  --darkblue: #102867;
+  --yellow: #ffda24;
+  --green: #087b4b;
+  --light: #f3f6fc;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: 'Hind Siliguri', sans-serif;
+  color: #202638;
+  background: var(--light);
+  line-height: 1.7;
+}
+
+header {
+  background: linear-gradient(120deg, #102867, #1768b6);
+  color: white;
+  padding: 14px 6%;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 3px 12px #0002;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.brand {
+  font-size: 25px;
+  font-weight: 800;
+  color: var(--yellow);
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 17px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+nav a:hover { color: var(--yellow); }
+
+.hero {
+  background: linear-gradient(125deg, #132c79, #1769ba);
+  color: white;
+  padding: 65px 6%;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: clamp(38px, 7vw, 72px);
+  margin: 0;
+  line-height: 1.25;
+  color: var(--yellow);
+}
+
+.hero h2 {
+  font-size: clamp(22px, 4vw, 35px);
+  margin: 10px 0;
+}
+
+.hero p {
+  font-size: 19px;
+  max-width: 720px;
+  margin: 15px auto 25px;
+}
+
+.button {
+  display: inline-block;
+  background: var(--yellow);
+  color: #152b65;
+  padding: 11px 25px;
+  border-radius: 8px;
+  font-weight: 800;
+  text-decoration: none;
+  margin: 5px;
+}
+
+.button.outline {
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+}
+
+section {
+  padding: 48px 6%;
+  scroll-margin-top: 85px;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 34px;
+  color: var(--blue);
+  margin: 0 0 10px;
+}
+
+.section-intro {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 30px;
+  color: #596273;
+}
+
+.about {
+  background: white;
+  text-align: center;
+}
+
+.about-box {
+  max-width: 850px;
+  margin: auto;
+  padding: 28px;
+  border-radius: 15px;
+  background: #f3f6fc;
+  border-top: 5px solid var(--blue);
+}
+
+.courses {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  padding: 23px;
+  border-radius: 13px;
+  box-shadow: 0 4px 18px #172b5010;
+  border-bottom: 4px solid var(--blue);
+}
+
+.card h3 {
+  color: var(--blue);
+  margin-top: 0;
+  font-size: 23px;
+}
+
+.price {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--green);
+}
+
+.features {
+  background: #e8eefb;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 15px;
+}
+
+.feature {
+  background: white;
+  padding: 18px;
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+.classes {
+  text-align: center;
+  background: white;
+}
+
+.contact {
+  background: #132c79;
+  color: white;
+  text-align: center;
+}
+
+.contact .section-title { color: var(--yellow); }
+
+.contact-box {
+  max-width: 720px;
+  margin: auto;
+  padding: 25px;
+  border: 1px solid #ffffff55;
+  border-radius: 15px;
+  background: #ffffff0c;
+}
+
+.contact a { color: white; }
+
+footer {
+  background: #091b4a;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.small {
+  font-size: 14px;
+  opacity: .85;
+}
+
+@media (max-width: 600px) {
+  header { padding: 12px 5%; }
+  .nav { justify-content: center; }
+  nav { justify-content: center; gap: 10px 15px; }
+  .hero { padding: 48px 5%; }
+  section { padding: 38px 5%; }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="nav">
+    <div class="brand">📐 গণিত একাডেমি</div>
+    <nav>
+      <a href="#home">হোম</a>
+      <a href="#about">পরিচিতি</a>
+      <a href="#courses">কোর্স</a>
+      <a href="#classes">ফ্রি ক্লাস</a>
+      <a href="#contact">যোগাযোগ</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section class="hero" id="home">
+  <h2>জয়পুরহাটে মানসম্মত গণিত শিক্ষার বিশ্বস্ত ঠিকানা</h2>
+  <h1>গণিত একাডেমি</h1>
+  <h2>মেজবা স্যার পরিচালিত</h2>
+  <p>গণিতকে সহজ করে শিখি, সাফল্যের পথে এগিয়ে নিয়ে যাই।</p>
+  <a class="button" href="#courses">আমাদের কোর্সসমূহ</a>
+  <a class="button outline" href="#contact">ভর্তি ও যোগাযোগ</a>
+</section>
+
+<section class="about" id="about">
+  <h2 class="section-title">আমাদের সম্পর্কে</h2>
+  <p class="section-intro">
+    গণিত ও উচ্চতর গণিত শেখার জন্য পরিকল্পিত পাঠদান,
+    সহজ ব্যাখ্যা এবং নিয়মিত অনুশীলনের একটি শিক্ষামূলক উদ্যোগ।
+  </p>
+
+  <div class="about-box">
+    <h2>মোঃ মেজবাউল ইসলাম</h2>
+    <h3>পরিচালক ও গণিত শিক্ষক</h3>
+    <p><strong>শিক্ষাগত যোগ্যতা:</strong> বি.এসসি. (অনার্স), এম.এসসি. (গণিত)</p>
+    <p>সাবেক সহকারী শিক্ষক (গণিত), জয়পুরহাট সদর থানা উচ্চ বিদ্যালয়।</p>
+    <p>শিক্ষার্থীদের গণিতের ধারণা পরিষ্কার করা, নিয়মিত অনুশীলন এবং পরীক্ষার প্রস্তুতিতে সহায়তা করাই আমাদের লক্ষ্য।</p>
+  </div>
+</section>
+
+<section id="courses">
+  <h2 class="section-title">আমাদের কোর্সসমূহ</h2>
+  <p class="section-intro">নিজের শ্রেণি অনুযায়ী উপযুক্ত কোর্স বেছে নাও।</p>
+
+  <div class="courses">
+
+    <div class="card">
+      <h3>ষষ্ঠ–সপ্তম শ্রেণি</h3>
+      <p>গণিত ও বিজ্ঞান</p>
+      <p>মৌলিক ধারণা, নিয়মিত অনুশীলন ও পরীক্ষার প্রস্তুতি।</p>
+      <div class="price">৩০০ টাকা/মাস</div>
+      <a class="button" href="#contact">ভর্তি সম্পর্কে জানুন</a>
+    </div>
+
+    <div class="card">
+      <h3>অষ্টম শ্রেণি</h3>
+      <p>গণিত ও বিজ্ঞান — বৃত্তি প্রস্তুতি</p>
+      <p>পাঠ্যবইভিত্তিক প্রস্তুতি ও অনুশীলন।</p>
+      <div class="price">৩০০ টাকা/মাস</div>
+      <a class="button" href="#contact">ভর্তি সম্পর্কে জানুন</a>
+    </div>
+
+    <div class="card">
+      <h3>নবম–দশম শ্রেণি</h3>
+      <p>গণিত ও উচ্চতর গণিত</p>
+      <p>বোর্ড পরীক্ষার প্রস্তুতি, MCQ ও সৃজনশীল প্রশ্ন সমাধান।</p>
+      <div class="price">৫০০ টাকা/মাস</div>
+      <a class="button" href="#contact">ভর্তি সম্পর্কে জানুন</a>
+    </div>
+
+    <div class="card">
+      <h3>এইচএসসি</h3>
+      <p>উচ্চতর গণিত</p>
+      <p>বেসিক থেকে উন্নত ধারণা, অধ্যায়ভিত্তিক অনুশীলন।</p>
+      <div class="price">ফি জানতে যোগাযোগ করুন</div>
+      <a class="button" href="#contact">যোগাযোগ করুন</a>
+    </div>
+
+    <div class="card">
+      <h3>চাকরির প্রস্তুতি</h3>
+      <p>বেসিক গণিত</p>
+      <p>চাকরির পরীক্ষার উপযোগী গাণিতিক সমস্যা সমাধানের অনুশীলন।</p>
+      <div class="price">২০০ টাকা/মাস</div>
+      <a class="button" href="#contact">যোগাযোগ করুন</a>
+    </div>
+
+  </div>
+</section>
+
+<section class="features">
+  <h2 class="section-title">আমাদের বিশেষত্ব</h2>
+  <p class="section-intro">গণিত শেখাকে সহজ ও কার্যকর করার জন্য আমাদের প্রচেষ্টা।</p>
+
+  <div class="feature-grid">
+    <div class="feature">✅ সহজ ব্যাখ্যায় পাঠদান</div>
+    <div class="feature">✅ সাপ্তাহিক পরীক্ষা ও অনুশীলন</div>
+    <div class="feature">✅ বোর্ডভিত্তিক প্রস্তুতি</div>
+    <div class="feature">✅ টেকনিকসহ MCQ সমাধান</div>
+    <div class="feature">✅ অধ্যায়ভিত্তিক পড়াশোনা</div>
+    <div class="feature">✅ শিক্ষার্থীদের অগ্রগতিতে গুরুত্ব</div>
+  </div>
+</section>
+
+<section class="classes" id="classes">
+  <h2 class="section-title">ফ্রি অনলাইন ক্লাস</h2>
+  <p class="section-intro">
+    গণিত একাডেমির ইউটিউব চ্যানেলে গণিত ও উচ্চতর গণিতের ক্লাস দেখুন।
+  </p>
+  <a class="button" href="https://www.youtube.com/@GonitAcademy24" target="_blank" rel="noopener">
+    YouTube-এ ক্লাস দেখুন
+  </a>
+  <p class="small">আপনার চ্যানেলের ঠিকানা আলাদা হলে পরে এই লিংকটি সংশোধন করতে হবে।</p>
+</section>
+
+<section class="contact" id="contact">
+  <h2 class="section-title">যোগাযোগ ও ভর্তি</h2>
+
+  <div class="contact-box">
+    <h2>গণিত একাডেমি</h2>
+    <p><strong>পরিচালনায়:</strong> মেজবা স্যার</p>
+    <p>📞 <a href="tel:01773260187">01773-260187</a></p>
+    <p>📞 <a href="tel:01345323577">01345-323577 (অফিস)</a></p>
+    <p>📍 থ্রি স্টার মোড়, হাজী মাদ্রাসা রোড, প্রফেসর পাড়া, জয়পুরহাট সদর, জয়পুরহাট।</p>
+    <p>📘 ফেসবুক: মেজবা স্যার / গণিত একাডেমি</p>
+    <p class="small">ভর্তি, কোর্স ও ক্লাসের সময়সূচি জানতে ফোন করুন।</p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <h3>গণিত একাডেমি</h3>
+  <p>গণিত শিখি, ভবিষ্যৎ গড়ি।</p>
+  <p class="small">© <span id="year"></span> গণিত একাডেমি। সর্বস্বত্ব সংরক্ষিত।</p>
+</footer>
+
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
