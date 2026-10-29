@@ -3,228 +3,396 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>গণিত একাডেমি | মেজবা স্যার</title>
-<meta name="description" content="মেজবা স্যার পরিচালিত গণিত একাডেমি। গণিত, উচ্চতর গণিত ও বিজ্ঞান শিক্ষার জন্য যোগাযোগ করুন।">
+
+<meta name="description" content="গণিত একাডেমি, মেজবা স্যারের পরিচালনায় গণিত ও উচ্চতর গণিত শিক্ষার নির্ভরযোগ্য প্রতিষ্ঠান।">
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700;800&display=swap');
-
 :root {
-  --blue: #173d91;
-  --darkblue: #102867;
-  --yellow: #ffda24;
-  --green: #087b4b;
-  --light: #f3f6fc;
+    --pink: #E2136E;
+    --magenta: #D4145A;
+    --purple: #652D75;
+    --deep-purple: #351044;
+    --light-pink: #FFF0F6;
+    --white: #FFFFFF;
+    --text: #302438;
+    --border: #F2C5DA;
+    --shadow: 0 6px 20px rgba(101, 45, 117, 0.10);
 }
 
-* { box-sizing: border-box; }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
 
 body {
-  margin: 0;
-  font-family: 'Hind Siliguri', sans-serif;
-  color: #202638;
-  background: var(--light);
-  line-height: 1.7;
+    font-family: Arial, "Noto Sans Bengali", sans-serif;
+    background: #FFF8FC;
+    color: var(--text);
+    line-height: 1.8;
 }
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    width: 92%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* Header */
 
 header {
-  background: linear-gradient(120deg, #102867, #1768b6);
-  color: white;
-  padding: 14px 6%;
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  box-shadow: 0 3px 12px #0002;
+    background: var(--white);
+    border-bottom: 3px solid var(--pink);
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
-.nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 12px;
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 15px 0;
 }
 
 .brand {
-  font-size: 25px;
-  font-weight: 800;
-  color: var(--yellow);
+    color: var(--purple);
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.brand span {
+    color: var(--pink);
 }
 
 nav {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 17px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
 }
 
 nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: 600;
+    color: var(--deep-purple);
+    font-weight: bold;
+    font-size: 14px;
 }
 
-nav a:hover { color: var(--yellow); }
-
-.hero {
-  background: linear-gradient(125deg, #132c79, #1769ba);
-  color: white;
-  padding: 65px 6%;
-  text-align: center;
+nav a:hover {
+    color: var(--pink);
 }
 
-.hero h1 {
-  font-size: clamp(38px, 7vw, 72px);
-  margin: 0;
-  line-height: 1.25;
-  color: var(--yellow);
-}
-
-.hero h2 {
-  font-size: clamp(22px, 4vw, 35px);
-  margin: 10px 0;
-}
-
-.hero p {
-  font-size: 19px;
-  max-width: 720px;
-  margin: 15px auto 25px;
-}
-
-.button {
-  display: inline-block;
-  background: var(--yellow);
-  color: #152b65;
-  padding: 11px 25px;
-  border-radius: 8px;
-  font-weight: 800;
-  text-decoration: none;
-  margin: 5px;
-}
-
-.button.outline {
-  background: transparent;
-  border: 2px solid white;
-  color: white;
-}
+/* Common Sections */
 
 section {
-  padding: 48px 6%;
-  scroll-margin-top: 85px;
+    padding: 28px 0;
+    scroll-margin-top: 90px;
+}
+
+.section-card {
+    background: var(--white);
+    border: 2px solid var(--border);
+    border-radius: 22px;
+    padding: 28px;
+    box-shadow: var(--shadow);
 }
 
 .section-title {
-  text-align: center;
-  font-size: 34px;
-  color: var(--blue);
-  margin: 0 0 10px;
+    color: var(--purple);
+    text-align: center;
+    font-size: 27px;
+    margin-bottom: 10px;
 }
 
-.section-intro {
-  text-align: center;
-  max-width: 700px;
-  margin: 0 auto 30px;
-  color: #596273;
+.section-subtitle {
+    text-align: center;
+    color: #75647C;
+    margin-bottom: 25px;
 }
 
-.about {
-  background: white;
-  text-align: center;
+/* Hero */
+
+.hero {
+    padding: 40px 0 25px;
 }
 
-.about-box {
-  max-width: 850px;
-  margin: auto;
-  padding: 28px;
-  border-radius: 15px;
-  background: #f3f6fc;
-  border-top: 5px solid var(--blue);
+.hero-card {
+    background: linear-gradient(135deg, #E2136E, #652D75);
+    color: var(--white);
+    text-align: center;
+    border: 3px solid #F6C0D8;
+    border-radius: 25px;
+    padding: 45px 22px;
+    box-shadow: 0 10px 28px rgba(101, 45, 117, 0.20);
 }
 
-.courses {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-  gap: 20px;
+.hero-label {
+    display: inline-block;
+    background: rgba(255,255,255,0.17);
+    border: 1px solid rgba(255,255,255,0.45);
+    border-radius: 30px;
+    padding: 5px 16px;
+    margin-bottom: 15px;
 }
 
-.card {
-  background: white;
-  padding: 23px;
-  border-radius: 13px;
-  box-shadow: 0 4px 18px #172b5010;
-  border-bottom: 4px solid var(--blue);
+.hero h1 {
+    font-size: 38px;
+    line-height: 1.5;
+    margin-bottom: 12px;
 }
 
-.card h3 {
-  color: var(--blue);
-  margin-top: 0;
-  font-size: 23px;
+.hero p {
+    max-width: 700px;
+    margin: 0 auto 20px;
+    font-size: 17px;
 }
 
-.price {
-  font-size: 24px;
-  font-weight: 800;
-  color: var(--green);
+.button {
+    display: inline-block;
+    background: var(--white);
+    color: var(--pink);
+    border: 2px solid var(--white);
+    border-radius: 30px;
+    padding: 10px 23px;
+    margin: 5px;
+    font-weight: bold;
+    transition: 0.25s;
 }
 
-.features {
-  background: #e8eefb;
+.button:hover {
+    background: var(--light-pink);
+    transform: translateY(-2px);
 }
 
-.feature-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-  gap: 15px;
+.button-outline {
+    background: transparent;
+    color: var(--white);
 }
 
-.feature {
-  background: white;
-  padding: 18px;
-  border-radius: 10px;
-  font-weight: 600;
+.button-outline:hover {
+    color: var(--purple);
 }
 
-.classes {
-  text-align: center;
-  background: white;
+/* Courses */
+
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
 }
 
-.contact {
-  background: #132c79;
-  color: white;
-  text-align: center;
+.course-card {
+    background: #FFFFFF;
+    border: 2px solid var(--border);
+    border-top: 5px solid var(--pink);
+    border-radius: 17px;
+    padding: 23px 18px;
+    box-shadow: var(--shadow);
+    transition: 0.25s;
 }
 
-.contact .section-title { color: var(--yellow); }
-
-.contact-box {
-  max-width: 720px;
-  margin: auto;
-  padding: 25px;
-  border: 1px solid #ffffff55;
-  border-radius: 15px;
-  background: #ffffff0c;
+.course-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--pink);
 }
 
-.contact a { color: white; }
+.course-card h3 {
+    color: var(--purple);
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.course-card p {
+    margin-bottom: 8px;
+}
+
+.fee {
+    display: inline-block;
+    background: var(--light-pink);
+    border: 1px solid var(--border);
+    color: var(--pink);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-weight: bold;
+    margin-top: 8px;
+}
+
+/* Teacher */
+
+.teacher-box {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 25px;
+    align-items: center;
+}
+
+.teacher-placeholder {
+    background: var(--light-pink);
+    border: 2px dashed var(--pink);
+    border-radius: 18px;
+    padding: 35px 15px;
+    text-align: center;
+    color: var(--purple);
+    font-weight: bold;
+}
+
+.teacher-info h3 {
+    color: var(--pink);
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.teacher-info ul {
+    padding-left: 22px;
+    margin-top: 10px;
+}
+
+/* YouTube */
+
+.youtube-card {
+    background: linear-gradient(135deg, #FFF0F6, #F7EEFF);
+    border: 2px solid var(--border);
+    border-radius: 18px;
+    padding: 28px 18px;
+    text-align: center;
+}
+
+.youtube-card h3 {
+    color: var(--purple);
+    font-size: 23px;
+    margin-bottom: 10px;
+}
+
+.youtube-button {
+    display: inline-block;
+    background: var(--pink);
+    color: white;
+    border-radius: 30px;
+    padding: 11px 24px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.youtube-button:hover {
+    background: var(--purple);
+}
+
+/* Contact */
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.contact-item {
+    background: #FFFFFF;
+    border: 2px solid var(--border);
+    border-radius: 16px;
+    padding: 20px;
+}
+
+.contact-item h3 {
+    color: var(--pink);
+    margin-bottom: 7px;
+}
+
+.contact-item a {
+    color: var(--purple);
+    font-weight: bold;
+    overflow-wrap: anywhere;
+}
+
+.contact-button {
+    display: inline-block;
+    background: var(--pink);
+    color: #FFFFFF !important;
+    padding: 10px 20px;
+    border-radius: 25px;
+    margin-top: 12px;
+}
+
+/* Footer */
 
 footer {
-  background: #091b4a;
-  color: white;
-  padding: 20px;
-  text-align: center;
+    background: var(--deep-purple);
+    color: var(--white);
+    text-align: center;
+    padding: 25px 15px;
+    margin-top: 30px;
 }
 
-.small {
-  font-size: 14px;
-  opacity: .85;
+footer p {
+    margin: 4px 0;
 }
 
-@media (max-width: 600px) {
-  header { padding: 12px 5%; }
-  .nav { justify-content: center; }
-  nav { justify-content: center; gap: 10px 15px; }
-  .hero { padding: 48px 5%; }
-  section { padding: 38px 5%; }
+footer strong {
+    color: #FFB9D6;
+}
+
+/* Mobile Responsive */
+
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .brand {
+        font-size: 21px;
+    }
+
+    nav {
+        justify-content: center;
+        gap: 12px;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+
+    .hero-card {
+        padding: 32px 16px;
+    }
+
+    .hero h1 {
+        font-size: 29px;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+    .section-card {
+        padding: 20px 15px;
+    }
+
+    .section-title {
+        font-size: 23px;
+    }
+
+    .course-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .teacher-box {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
 }
 </style>
 </head>
@@ -232,144 +400,200 @@ footer {
 <body>
 
 <header>
-  <div class="nav">
-    <div class="brand">📐 গণিত একাডেমি</div>
-    <nav>
-      <a href="#home">হোম</a>
-      <a href="#about">পরিচিতি</a>
-      <a href="#courses">কোর্স</a>
-      <a href="#classes">ফ্রি ক্লাস</a>
-      <a href="#contact">যোগাযোগ</a>
-    </nav>
-  </div>
+    <div class="container header-content">
+        <a class="brand" href="#home">গণিত <span>একাডেমি</span></a>
+
+        <nav>
+            <a href="#home">হোম</a>
+            <a href="#courses">কোর্সসমূহ</a>
+            <a href="#teacher">শিক্ষক পরিচিতি</a>
+            <a href="#youtube">ইউটিউব</a>
+            <a href="#contact">যোগাযোগ</a>
+        </nav>
+    </div>
 </header>
 
 <main>
 
+<!-- Home -->
+
 <section class="hero" id="home">
-  <h2>জয়পুরহাটে মানসম্মত গণিত শিক্ষার বিশ্বস্ত ঠিকানা</h2>
-  <h1>গণিত একাডেমি</h1>
-  <h2>মেজবা স্যার পরিচালিত</h2>
-  <p>গণিতকে সহজ করে শিখি, সাফল্যের পথে এগিয়ে নিয়ে যাই।</p>
-  <a class="button" href="#courses">আমাদের কোর্সসমূহ</a>
-  <a class="button outline" href="#contact">ভর্তি ও যোগাযোগ</a>
+    <div class="container">
+        <div class="hero-card">
+            <div class="hero-label">মেজবা স্যার পরিচালিত</div>
+
+            <h1>গণিত একাডেমি</h1>
+
+            <p>
+                গণিত ও উচ্চতর গণিত শেখার জন্য একটি যত্নশীল শিক্ষাপ্রতিষ্ঠান।
+                সহজ ব্যাখ্যা, নিয়মিত অনুশীলন ও পরীক্ষার মাধ্যমে
+                শিক্ষার্থীদের এগিয়ে নিয়ে যাওয়াই আমাদের লক্ষ্য।
+            </p>
+
+            <a class="button" href="#courses">কোর্সসমূহ দেখুন</a>
+            <a class="button button-outline" href="#contact">যোগাযোগ করুন</a>
+        </div>
+    </div>
 </section>
 
-<section class="about" id="about">
-  <h2 class="section-title">আমাদের সম্পর্কে</h2>
-  <p class="section-intro">
-    গণিত ও উচ্চতর গণিত শেখার জন্য পরিকল্পিত পাঠদান,
-    সহজ ব্যাখ্যা এবং নিয়মিত অনুশীলনের একটি শিক্ষামূলক উদ্যোগ।
-  </p>
-
-  <div class="about-box">
-    <h2>মোঃ মেজবাউল ইসলাম</h2>
-    <h3>পরিচালক ও গণিত শিক্ষক</h3>
-    <p><strong>শিক্ষাগত যোগ্যতা:</strong> বি.এসসি. (অনার্স), এম.এসসি. (গণিত)</p>
-    <p>সাবেক সহকারী শিক্ষক (গণিত), জয়পুরহাট সদর থানা উচ্চ বিদ্যালয়।</p>
-    <p>শিক্ষার্থীদের গণিতের ধারণা পরিষ্কার করা, নিয়মিত অনুশীলন এবং পরীক্ষার প্রস্তুতিতে সহায়তা করাই আমাদের লক্ষ্য।</p>
-  </div>
-</section>
+<!-- Courses -->
 
 <section id="courses">
-  <h2 class="section-title">আমাদের কোর্সসমূহ</h2>
-  <p class="section-intro">নিজের শ্রেণি অনুযায়ী উপযুক্ত কোর্স বেছে নাও।</p>
+    <div class="container">
+        <div class="section-card">
+            <h2 class="section-title">আমাদের কোর্সসমূহ</h2>
 
-  <div class="courses">
+            <p class="section-subtitle">
+                শিক্ষার্থীর শ্রেণি অনুযায়ী গণিত শিক্ষার ব্যবস্থা
+            </p>
 
-    <div class="card">
-      <h3>ষষ্ঠ–সপ্তম শ্রেণি</h3>
-      <p>গণিত ও বিজ্ঞান</p>
-      <p>মৌলিক ধারণা, নিয়মিত অনুশীলন ও পরীক্ষার প্রস্তুতি।</p>
-      <div class="price">৩০০ টাকা/মাস</div>
-      <a class="button" href="#contact">ভর্তি সম্পর্কে জানুন</a>
+            <div class="course-grid">
+
+                <div class="course-card">
+                    <h3>ষষ্ঠ–অষ্টম শ্রেণি</h3>
+                    <p>বিষয়: গণিত ও বিজ্ঞান</p>
+                    <p>ভিত্তি মজবুত করা, নিয়মিত অনুশীলন ও সমস্যা সমাধানে গুরুত্ব দেওয়া হয়।</p>
+                    <div class="fee">মাসিক ফি: ৩০০ টাকা</div>
+                </div>
+
+                <div class="course-card">
+                    <h3>নবম–দশম শ্রেণি</h3>
+                    <p>বিষয়: গণিত ও উচ্চতর গণিত</p>
+                    <p>বোর্ড পরীক্ষার প্রস্তুতি, গাণিতিক সমস্যা সমাধান ও নিয়মিত অনুশীলন।</p>
+                    <div class="fee">মাসিক ফি: ৫০০ টাকা</div>
+                </div>
+
+                <div class="course-card">
+                    <h3>চাকরিপ্রার্থীদের জন্য</h3>
+                    <p>বিষয়: বেসিক গণিত</p>
+                    <p>চাকরির পরীক্ষার জন্য গণিতের মৌলিক ধারণা ও সমস্যা সমাধানের অনুশীলন।</p>
+                    <div class="fee">মাসিক ফি: ২০০ টাকা</div>
+                </div>
+
+            </div>
+
+            <p style="text-align:center; margin-top:22px;">
+                <strong>এইচএসসি উচ্চতর গণিতের কোর্স ও ফি জানতে যোগাযোগ করুন।</strong>
+            </p>
+        </div>
     </div>
-
-    <div class="card">
-      <h3>অষ্টম শ্রেণি</h3>
-      <p>গণিত ও বিজ্ঞান — বৃত্তি প্রস্তুতি</p>
-      <p>পাঠ্যবইভিত্তিক প্রস্তুতি ও অনুশীলন।</p>
-      <div class="price">৩০০ টাকা/মাস</div>
-      <a class="button" href="#contact">ভর্তি সম্পর্কে জানুন</a>
-    </div>
-
-    <div class="card">
-      <h3>নবম–দশম শ্রেণি</h3>
-      <p>গণিত ও উচ্চতর গণিত</p>
-      <p>বোর্ড পরীক্ষার প্রস্তুতি, MCQ ও সৃজনশীল প্রশ্ন সমাধান।</p>
-      <div class="price">৫০০ টাকা/মাস</div>
-      <a class="button" href="#contact">ভর্তি সম্পর্কে জানুন</a>
-    </div>
-
-    <div class="card">
-      <h3>এইচএসসি</h3>
-      <p>উচ্চতর গণিত</p>
-      <p>বেসিক থেকে উন্নত ধারণা, অধ্যায়ভিত্তিক অনুশীলন।</p>
-      <div class="price">ফি জানতে যোগাযোগ করুন</div>
-      <a class="button" href="#contact">যোগাযোগ করুন</a>
-    </div>
-
-    <div class="card">
-      <h3>চাকরির প্রস্তুতি</h3>
-      <p>বেসিক গণিত</p>
-      <p>চাকরির পরীক্ষার উপযোগী গাণিতিক সমস্যা সমাধানের অনুশীলন।</p>
-      <div class="price">২০০ টাকা/মাস</div>
-      <a class="button" href="#contact">যোগাযোগ করুন</a>
-    </div>
-
-  </div>
 </section>
 
-<section class="features">
-  <h2 class="section-title">আমাদের বিশেষত্ব</h2>
-  <p class="section-intro">গণিত শেখাকে সহজ ও কার্যকর করার জন্য আমাদের প্রচেষ্টা।</p>
+<!-- Teacher -->
 
-  <div class="feature-grid">
-    <div class="feature">✅ সহজ ব্যাখ্যায় পাঠদান</div>
-    <div class="feature">✅ সাপ্তাহিক পরীক্ষা ও অনুশীলন</div>
-    <div class="feature">✅ বোর্ডভিত্তিক প্রস্তুতি</div>
-    <div class="feature">✅ টেকনিকসহ MCQ সমাধান</div>
-    <div class="feature">✅ অধ্যায়ভিত্তিক পড়াশোনা</div>
-    <div class="feature">✅ শিক্ষার্থীদের অগ্রগতিতে গুরুত্ব</div>
-  </div>
+<section id="teacher">
+    <div class="container">
+        <div class="section-card">
+            <h2 class="section-title">শিক্ষক পরিচিতি</h2>
+
+            <p class="section-subtitle">
+                অভিজ্ঞতার সঙ্গে যত্নশীল পাঠদান
+            </p>
+
+            <div class="teacher-box">
+
+                <div class="teacher-placeholder">
+                    <p>মেজবা স্যারের ছবি</p>
+                    <p>এখানে ছবি যোগ করা যাবে</p>
+                </div>
+
+                <div class="teacher-info">
+                    <h3>মোঃ মেজবাউল ইসলাম</h3>
+
+                    <p><strong>পরিচালক:</strong> গণিত একাডেমি</p>
+
+                    <p><strong>শিক্ষাগত যোগ্যতা:</strong> B.Sc. (Honours), M.Sc. in Mathematics</p>
+
+                    <p><strong>পাঠদানের অভিজ্ঞতা:</strong> ১২ বছর</p>
+
+                    <p><strong>সাবেক পদ:</strong> সহকারী শিক্ষক (গণিত)</p>
+
+                    <p><strong>প্রতিষ্ঠান:</strong> জয়পুরহাট সদর থানা উচ্চ বিদ্যালয়, জয়পুরহাট</p>
+
+                    <ul>
+                        <li>গণিতের বিষয়গুলো সহজভাবে বোঝানোর চেষ্টা</li>
+                        <li>নিয়মিত অনুশীলন ও পরীক্ষার মাধ্যমে অগ্রগতি যাচাই</li>
+                        <li>শিক্ষার্থীদের দুর্বলতা চিহ্নিত করে সহায়তা</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
 </section>
 
-<section class="classes" id="classes">
-  <h2 class="section-title">ফ্রি অনলাইন ক্লাস</h2>
-  <p class="section-intro">
-    গণিত একাডেমির ইউটিউব চ্যানেলে গণিত ও উচ্চতর গণিতের ক্লাস দেখুন।
-  </p>
-  <a class="button" href="https://www.youtube.com/@GonitAcademy24" target="_blank" rel="noopener">
-    YouTube-এ ক্লাস দেখুন
-  </a>
-  <p class="small">আপনার চ্যানেলের ঠিকানা আলাদা হলে পরে এই লিংকটি সংশোধন করতে হবে।</p>
+<!-- YouTube -->
+
+<section id="youtube">
+    <div class="container">
+        <div class="section-card">
+            <h2 class="section-title">আমাদের ইউটিউব চ্যানেল</h2>
+
+            <div class="youtube-card">
+                <h3>গণিত একাডেমি</h3>
+
+                <p>
+                    গণিত শেখা, বিভিন্ন গাণিতিক সমস্যার সমাধান
+                    এবং শিক্ষামূলক ভিডিও দেখতে আমাদের চ্যানেল ভিজিট করুন।
+                </p>
+
+                <a
+                    class="youtube-button"
+                    href="https://www.youtube.com/@GonitAcademy24"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    YouTube চ্যানেল দেখুন
+                </a>
+            </div>
+        </div>
+    </div>
 </section>
 
-<section class="contact" id="contact">
-  <h2 class="section-title">যোগাযোগ ও ভর্তি</h2>
+<!-- Contact -->
 
-  <div class="contact-box">
-    <h2>গণিত একাডেমি</h2>
-    <p><strong>পরিচালনায়:</strong> মেজবা স্যার</p>
-    <p>📞 <a href="tel:01773260187">01773-260187</a></p>
-    <p>📞 <a href="tel:01345323577">01345-323577 (অফিস)</a></p>
-    <p>📍 থ্রি স্টার মোড়, হাজী মাদ্রাসা রোড, প্রফেসর পাড়া, জয়পুরহাট সদর, জয়পুরহাট।</p>
-    <p>📘 ফেসবুক: মেজবা স্যার / গণিত একাডেমি</p>
-    <p class="small">ভর্তি, কোর্স ও ক্লাসের সময়সূচি জানতে ফোন করুন।</p>
-  </div>
+<section id="contact">
+    <div class="container">
+        <div class="section-card">
+            <h2 class="section-title">যোগাযোগ করুন</h2>
+
+            <p class="section-subtitle">
+                কোর্স, ভর্তি ও অন্যান্য তথ্য জানতে যোগাযোগ করুন
+            </p>
+
+            <div class="contact-grid">
+
+                <div class="contact-item">
+                    <h3>📍 আমাদের ঠিকানা</h3>
+                    <p>
+                        থ্রি স্টার মোড়,<br>
+                        হাজী মাদ্রাসা রোড,<br>
+                        জয়পুরহাট সদর, জয়পুরহাট।
+                    </p>
+                </div>
+
+                <div class="contact-item">
+                    <h3>📞 মোবাইল নম্বর</h3>
+                    <p>গণিত একাডেমি</p>
+                    <a href="tel:+8801773260187">০১৭৭৩-২৬০১৮৭</a>
+                    <br>
+                    <a class="contact-button" href="tel:+8801773260187">
+                        সরাসরি কল করুন
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
 </section>
 
 </main>
 
 <footer>
-  <h3>গণিত একাডেমি</h3>
-  <p>গণিত শিখি, ভবিষ্যৎ গড়ি।</p>
-  <p class="small">© <span id="year"></span> গণিত একাডেমি। সর্বস্বত্ব সংরক্ষিত।</p>
+    <p><strong>গণিত একাডেমি</strong></p>
+    <p>পরিচালনায়: মেজবা স্যার</p>
+    <p>শেখার মাধ্যমে এগিয়ে যাই, সাফল্যের পথে এগিয়ে নিয়ে যাই।</p>
+    <p>© 2026 গণিত একাডেমি। সর্বস্বত্ব সংরক্ষিত।</p>
 </footer>
-
-<script>
-document.getElementById("year").textContent = new Date().getFullYear();
-</script>
 
 </body>
 </html>
